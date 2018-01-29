@@ -76,4 +76,13 @@ end
 　ループ内では再定義された変数を代入し続けるため
 　結果、10000にたどり着き、ループから抜け出すことが出来る。
 　
-　・Repository = プロジェクト単位のこと
+　・Repository  プロジェクト単位のこと
+　・push 転送
+　・git init ローカルにRepositoryを作成すること
+　・git remote add origin "URL" commitの転送先を指定する
+　 *originの部分は変えることが出来る(バックアップの場合はadd buckup 等)
+　・git add "対象のファイル名"　選択したファイルをcommit対象にする
+　　*git add . の場合は全選択
+　・git commit -m "コミットタイトル"　選択したファイルをcommitする
+　・git push origin master 指定したファイルを転送する
+　・コミット中にエラーを発生したら、たつろーさんに聞く

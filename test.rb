@@ -55,15 +55,93 @@
 
 # p strs
 
-case $age
-when 0 .. 2
-  "baby"
-when 3 .. 6
-  "little child"
-when 7 .. 12
-  "child"
-when 13 .. 18
-  "youth"
-else
-  "adult"
+# case $age
+# when 0 .. 2
+#   "baby"
+# when 3 .. 6
+#   "little child"
+# when 7 .. 12
+#   "child"
+# when 13 .. 18
+#   "youth"
+# else
+#   "adult"
+# end
+
+
+def gcp #グーを出す
+  return Random.new.rand(1..3)
 end
+
+def syoubu
+while true
+response = gets
+  case response.chomp
+  when "g"
+    p "あなたはグーを選んだ!!"
+    gcp
+    break
+  when "p"
+    p "あなたはパーを選んだ!!"
+    gcp
+    break
+  when "c"
+    p "あなたはチョキを選んだ!!"
+    gcp
+    break
+  else
+    p "手を選んでください"
+  end
+end
+end
+
+syoubu
+
+while true
+   if gcp == 2
+    p "おめでとう、あなたは勝利しました";
+      break
+    elsif gcp == 3
+      p "残念、あなたは敗北してしまった"
+      break
+    else
+      p "あいこだ！もう一度"
+      syoubu
+   end
+end
+
+
+# def syoubu
+#     while true
+#         if gcp == 2
+#          p "おめでとう、あなたは勝利しました";
+#         break
+#         elsif gcp == 3
+#          p "残念、あなたは敗北してしまった"
+#         break
+#         else
+#          p "あいこだ！もう一度"
+#          break
+#         end
+#     end
+# end
+
+# while gcp == 3
+# response = gets
+#   case response.chomp
+#   when "g"
+#     p "あなたはグーを選んだ!!"
+#     gcp
+#     syoubu
+#   when "p"
+#     p "あなたはパーを選んだ!!"
+#     gcp
+#     break
+#   when "c"
+#     p "あなたはチョキを選んだ!!"
+#     gcp
+#     break
+#   else
+#     p "手を選んでください"
+#   end
+# end
