@@ -1,0 +1,79 @@
+・エラーメッセージ
+　ファイル名:xのxは行数の事
+
+・undifined
+　定義されていない(シングル(ダブル)クオーテーションが入ってない等)
+
+・定数は今後変更をされることの無いコマンドに使用する
+　例：変わるとソフトが動かなくなるレベルの物
+
+・gets ユーザーが入力した文字
+
+def are_you_ok
+	while true #trueである限り続ける(while:～である限り続ける)
+		print "is it ok? [1|2]:"
+		response = gets
+		case response
+		when "1\n"
+			puts "you say yes!"
+			return true
+		when "2\n"
+			puts "you say no!"
+			return false
+		else #上記の選択肢以外のコマンドを入力した場合こちらが選択される
+		    p "DOTIRADEMONAI" # returnを入力していないためループされる
+		end
+	end	
+end
+
+are_you_ok
+
+・上記のように def are_you_ok と関数を定義した場合
+　後からare_you_okと関数名を指定すれば
+　are_you_okの関数の処理を実行する
+　以上のように、関数、または変数、定数も
+　定義しただけでは実行されないので
+　関数名を指定し、処理を実行させる必要がある
+
+・ループを抜けるのはbreak
+　
+・chomp 文字列の先頭と末尾の改行を取り除く
+
+・['A', 'B', 'C'].sample ランダムな文字列を得ることが出来る
+
+・def gu #グーを出す上ですでにCPU側の手の結果の処理も終える
+  return 1,rand(3)
+end
+
+・Random.new.rand(1..3)ランダムの数字を出力する
+
+・num = Random.new.rand(3)
+　hash = ['apple', 'orange', 'grape']
+　
+　　
+・breakを入力した際に
+　ループ分では無いと,void(何もない、例:ループが存在しない) errorを吐く
+　ループ文ではないので繰り返しの終了処理が出来ない(そもそも繰り返しではない)
+
+・while ～である限りループし続ける(true)
+・until ～でに達するまでループし続ける(false)
+
+・while a < 10000
+　a = 1
+　a = a+a
+　end
+　上記の処理では、結果が10000以下のたびにwhileの直下に
+　ループ基点が戻るため、変数が始めの1に再定義されてしまう
+　よって、数が増えることはない
+　
+　a = 1
+　while a < 10000
+　a = a+a
+　end
+　上記の処理では、結果が10000以下のたびにwhileの直下に
+　ループ基点が戻るが、始めの変数の定義であるa = 1を
+　whileより上の行に置くことで、ループの中に組み込まれず
+　ループ内では再定義された変数を代入し続けるため
+　結果、10000にたどり着き、ループから抜け出すことが出来る。
+　
+　・Repository = プロジェクト単位のこと
