@@ -16,13 +16,13 @@ while true  # trueである限り続ける(while:～である限り続ける)
 	response = gets
 	
 	case response.chomp
-	  when "y"
-		  p "あなたの出す手を選んでください"
-		  break
-	  when "n"
-	    gameend
-	  else
-	    p "yかnを選んでください"
+  when "y"
+	  p "あなたの出す手を選んでください"
+	  break
+  when "n"
+    gameend
+  else
+    p "yかnを選んでください"
 	end
 end	
 
@@ -33,20 +33,20 @@ p "c/チョキを出す"
 while true
 response = gets
   case response.chomp
-    when "g"
-     p "あなたはグーを選んだ!!"
-     gcp
-     break
-   when "p"
-     p "あなたはパーを選んだ!!"
-     gcp
-     break
-    when "c"
-      p "あなたはチョキを選んだ!!"
-      gcp
-      break
-    else
-      p "手を選んでください"
+  when "g"
+    p "あなたはグーを選んだ!!"
+    gcp
+    break
+  when "p"
+    p "あなたはパーを選んだ!!"
+    gcp
+    break
+  when "c"
+    p "あなたはチョキを選んだ!!"
+    gcp
+    break
+  else
+    p "手を選んでください"
   end
 end
 
